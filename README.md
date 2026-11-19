@@ -3,6 +3,20 @@
 A beginner-friendly React, Flask, and MongoDB starter. The React app talks to a
 Flask JSON API; MongoDB persistence is optional for local development.
 
+## Project structure
+
+```text
+backend/
+  routes/       API endpoints
+  services/     Sentiment analysis logic
+  db.py         MongoDB connection and collection access
+  tests/        Backend tests
+frontend/src/
+  components/   Reusable interface components
+  pages/        Application screens
+  services/     Frontend API client
+```
+
 ## Requirements
 
 - Node.js 20.19+ or 22.12+
