@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: fullstack-ai-app-api
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn --chdir backend app:app --bind 0.0.0.0:$PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: MONGO_DB_NAME
+        value: ai_fullstack
+      - key: FRONTEND_ORIGIN
+        sync: false
